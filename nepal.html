@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Gahana Griha | Premium Gold & Silver Jewelry in Damak</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --bg-dark: #0D0D0D;
+            --bg-card: #1A1A1A;
+            --text-light: #F5F5F5;
+            --text-muted: #A0A0A0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Top Announcement Bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary));
+            color: #000;
+            text-align: center;
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: rgba(13, 13, 13, 0.95);
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #FFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--gold-primary);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, var(--gold-dark), var(--gold-primary));
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn-outline {
+            background: transparent;
+            color: var(--gold-primary);
+            padding: 0.8rem 1.8rem;
+            border: 2px solid var(--gold-primary);
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn:hover, .cta-btn-outline:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-btn-outline:hover {
+            background: var(--gold-primary);
+            color: #000;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            background-color: #121212;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold-primary);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gold-light);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            color: var(--gold-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 3rem 5% 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-info h4 {
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-info p, .footer-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Developer Credit Banner */
+        .dev-credit {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(212, 175, 55, 0.3);
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .dev-credit strong {
+            color: var(--gold-primary);
+        }
+
+        .dev-credit .phone-highlight {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .tagline { font-size: 1.1rem; }
+            .hero p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🇳🇵 मेचीदेखि महाकालीसम्म - All Nepal Safe Delivery Available!
+    </div>
+
+    <header>
+        <div class="logo">Nepal Gahana <span>Griha</span></div>
+        <a href="tel:9842691538" class="cta-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+            <i class="fas fa-phone"></i> Call Now
+        </a>
+    </header>
+
+    <section class="hero">
+        <h1>नेपाल गहना गृह</h1>
+        <div class="tagline">(Nepal Gahana Griha - Damak, Jhapa)</div>
+        <p>तपाईंको विश्वासको प्रतीक! उच्च गुणस्तरका सुन तथा चाँदीका नयाँ र आकर्षक गहनाहरूका लागि हामीलाई सम्झनुहोस्।</p>
+        
+        <div class="hero-btns">
+            <a href="https://wa.me/9779842691538" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp Direct</a>
+            <a href="tel:9824049776" class="cta-btn-outline"><i class="fas fa-phone"></i> 9824049776</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-gem"></i>
+            <h3>सबै किसिमका गहनाहरू</h3>
+            <p>Traditional Nepalese bridal ornaments (तिलहरी, नौगेडी) to modern custom minimalist designs.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Min to Max Gold</h3>
+            <p>न्यूनतमदेखि अधिकतम तौल सम्मका शुद्ध र गुणस्तरीय सुनका गहनाहरू उपलब्ध छन्।</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-coins"></i>
+            <h3>Silver Items (चाँदी)</h3>
+            <p>All kinds of fine silver jewelry, utensils, and traditional gifts (चाँदीका सम्पूर्ण सामानहरू)।</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-truck-fast"></i>
+            <h3>All Nepal Delivery</h3>
+            <p>नेपालभर सुरक्षित डेलिभरीको व्यवस्था रहेको छ। Fast & secure shipping.</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">हाम्रा गहना संकलनहरू</h2>
+        <p class="section-subtitle">Our Exclusive Collections</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=600&q=80" alt="Gold Jewelry">
+                <div class="product-info">
+                    <h3>सुनका गहनाहरू (Gold)</h3>
+                    <p>Guaranteed purity & authentic craftsmanship for every ceremony.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Silver Ornaments">
+                <div class="product-info">
+                    <h3>चाँदीका गहनाहरू (Silver)</h3>
+                    <p>High-finish hallmarked silver ornaments & accessories.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Custom Jewelry">
+                <div class="product-info">
+                    <h3>Bridal Set & Custom Orders</h3>
+                    <p>तपाईंको रोजाइ अनुसार अर्डरमा गहना तयार पारिन्छ।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Nepal Gahana Griha</h4>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--gold-primary);"></i> Damak-9, Bargacchi, Jhapa</p>
+                <p>दमक-९, वरगाछी, झापा</p>
+            </div>
+            <div class="footer-info">
+                <h4>सम्पर्क नम्बर (Contact Us)</h4>
+                <a href="tel:9842691538"><i class="fas fa-phone"></i> 9842691538</a>
+                <a href="tel:9824049776"><i class="fas fa-phone"></i> 9824049776</a>
+            </div>
+            <div class="footer-info">
+                <h4>Delivery Service</h4>
+                <p>नेपालभर जुनसुकै ठाउँमा होम डेलिभरीको सुविधा।</p>
+            </div>
+        </div>
+
+        <div class="dev-credit">
+            <p>If you also want a web page like this, contact programmer <strong>Aayush Nepal</strong></p>
+            <p>Phone: 
+                <span class="phone-highlight">9705434038</span> / 
+                <span class="phone-highlight">9842691538</span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
